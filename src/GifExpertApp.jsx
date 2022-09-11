@@ -9,6 +9,11 @@ export const GifExpertApp = () => {
     /* setCategories(['newCategory', ...categories]); */
     setCategories(cat => [newCategory, ...cat]);
   };
+
+  const onDeleteCategory = deleteCategory => {
+    const updatedCategories = categories.filter(category => category != deleteCategory);
+    setCategories(updatedCategories);
+  };
   return (
     <>
       <h1>GifExpertApp</h1>
@@ -17,7 +22,7 @@ export const GifExpertApp = () => {
       pero la escribimos en en el input en vez de escribirla arriba*/ onNewCategory={value => onAddCategory(value)}
       />
       {categories.map(category => (
-        <GifGrid key={category} category={category} />
+        <GifGrid key={category} category={category} onDeleteCategory={onDeleteCategory} />
       ))}
     </>
   );

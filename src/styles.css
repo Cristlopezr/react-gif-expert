@@ -7,6 +7,20 @@ body {
   padding: 60px;
 }
 
+.display-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.eliminar {
+  border: none;
+  border: 1px solid hsl(200, 20%, 50%);
+  border-radius: 15px;
+  padding: 10px;
+  cursor: pointer;
+}
+
 input {
   background-color: white;
   border-radius: 5px;
@@ -24,7 +38,6 @@ h2 {
 
 h3 {
   font-size: 3rem;
-  margin-bottom: 5px;
 }
 
 .card-grid {
